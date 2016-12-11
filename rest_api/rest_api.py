@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify, abort
 from pymongo import MongoClient
-import json
 
 app = Flask(__name__)
 app.debug = True
