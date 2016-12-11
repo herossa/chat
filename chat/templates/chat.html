@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/static/chatstyle.css" type="text/css">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+<script>
+    var page_data = {'user': '{{ user }}', 'room': '{{ room }}' };
+</script>
+<script type="text/javascript" src="/static/controller.js"></script>
+{% block body %}
+    <div class="chat-screen">
+        <div class="app-title">
+            {% if user and room %}
+                <h1>Olá: {{ user }}!</h1>
+                 <h1>Seja bem vindo a sala: {{ room }}</h1>
+            {% endif %}
+        </div>
+
+        <div class="app-messages" id="app-messages">
+            <ul id="list-message">
+            </ul>
+        </div>
+
+        <form class="control-group" id="message" action="#" method="post">
+            <input type="text" value="" placeholder="mensagem" name="message_data" id="message_data">
+            <input type="submit" value="Enviar" class="btn btn-primary btn-large btn-block">
+        </form>
+    </div>
+{% endblock %}

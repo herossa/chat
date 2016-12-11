@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Arial;
+    background-color: #3498DB;
+    padding: 3%;
+}
+
+.chat {
+    margin: 20px auto;
+}
+
+.chat-screen {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 5px;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    min-width: 650px;
+    min-height: 565px;
+}
+
+.app-title {
+    text-align: center;
+    color: #777;
+    font-size: 10px;
+}
+
+.app-messages {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    border-color: darkgray;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: white;
+    height: 75%;
+    overflow-y: scroll;
+}
+
+.app-messages ul {
+    list-style-type: none;
+    text-align: left;
+    width: 95%
+}
+
+.app-messages ul li {
+    margin-bottom: 5px;
+}
+
+.control-group {
+    margin-top: 10px;
+}
+
+input {
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    width: 75%;
+    transition: border .5s;
+    height: 35px;
+}
+
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+.btn {
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    width: 25%;
+    height: 35px;
+    float: right;
+    min-width: 150px;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+}
+
+ul {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+ul > li {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
