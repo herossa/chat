@@ -11,20 +11,20 @@
 
 Para que o ambiente seja preparado de maneira correta, basta executar o comando abaixo:
 ```
-sudo configure.sh
+sudo ./configure.sh
 ```
 
 ### Executando os testes
 ```
-run_tests.sh
+./run_tests.sh
 ```
 ### Executando a api rest
 ```
-run_web_app.sh
+./run_web_app.sh
 ```
 ### Executando o web app
 ```
-run_web_app.sh
+./run_web_app.sh
 ```
 
 ### Como proceder o acesso ao chat
