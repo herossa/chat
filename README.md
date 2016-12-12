@@ -11,7 +11,7 @@
 
 Para que o ambiente seja preparado de maneira correta, basta executar o comando abaixo:
 ```
-configure.sh
+sudo configure.sh
 ```
 
 ### Executando os testes
