@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 app.secret_key = app.secret_key = os.urandom(32)
-app.debug = True
+app.debug = False
 app.config['REST_API_URL'] = 'http://localhost:5000'
 
 sck_io = SocketIO(app, async_mode="threading")
@@ -42,11 +42,13 @@ def post_message():
 
 
 @app.route('/<string:room>/get_messages/', methods=['GET'])
-def retrieve_messages_from_room(name):
-    if name in ['favicon.ico', 'login']:
+def retrieve_messages_from_room(room):
+    if room in ['favicon.ico', 'login']:
         abort(400)
-    response = requests.get(app.config.get('REST_API_URL') + '/api' + name)
-    data = response.json().get('history', [])
+    response = requests.get(app.config.get('REST_API_URL') + '/api/' + room)
+    data = response.json().get('history', "")
+    if data == "":
+        return jsonify({'result': []}), 200
     return jsonify({'result': data}), 200
 
 

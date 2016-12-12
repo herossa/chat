@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify, abort
 from pymongo import MongoClient
 
 app = Flask(__name__)
-app.debug = True
-db = MongoClient('mongodb://localhost:27017/').db
+app.debug = False
+db = MongoClient('mongodb://deguchre:ep11DVvR#Ft$@ds119368.mlab.com:19368/restdb').restdb
 
 
 def is_valid(data):
@@ -37,4 +37,4 @@ def get_messages(room):
     return jsonify({'history': history}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
