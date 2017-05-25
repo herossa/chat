@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 app.debug = False
-db = MongoClient('mongodb://deguchre:ep11DVvR#Ft$@ds119368.mlab.com:19368/restdb').restdb
+db = MongoClient('mongodb://localhost:27017/restdb').restdb
 
 
 def is_valid(data):
